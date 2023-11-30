@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Form || Validation </title>
+
+</head>
+
+<body>
+  <div class="container">
+    <h3>Dragon Travel Desk</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label">Enter User Name</label>
+            <input type="text" class="form-control " id="name" aria-describedby="emailHelp"
+              placeholder="Enter User Name" autofocus>
+            <small id="text-notification" class="invalid-feedback">
+              Your username must be 2-10 characters long and should not start with a number !!
+            </small>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputNumebr" class="form-label">Enter Number</label>
+            <input type="number" class="form-control" id="number" placeholder="number">
+            <small id="text-notification" class="invalid-feedback">
+              Your number must be 10 digit & should not start with characters !!
+            </small>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputemail" class="form-label">Enter Email</label>
+            <input type="email" class="form-control" id="email" placeholder="email">
+            <small id="text-notification" class="invalid-feedback">
+              Your emial must be a valid email !!
+            </small>
+          </div>
+          <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="Car">
+            <option selected>Select Your Car</option>
+            <option value="1">Rolls Royce</option>
+            <option value="2">Audi</option>
+            <option value="3">Marcodios</option>
+          </select>
+          <br>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+
+          <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="success" class="alert alert-success alert-dismissible fade " role="alert">
+    <strong>Success!</strong> Your travel request has been submit successfully !!!!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div id="failure" class="alert alert-danger alert-dismissible fade" role="alert">
+    <strong>Errors!</strong> Your travel request has not been sent due to some errors!!!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
